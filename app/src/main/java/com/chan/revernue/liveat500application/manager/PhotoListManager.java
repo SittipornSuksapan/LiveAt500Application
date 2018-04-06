@@ -2,6 +2,7 @@ package com.chan.revernue.liveat500application.manager;
 
 import android.content.Context;
 
+import com.chan.revernue.liveat500application.dao.PhotoItemCollectionDao;
 import com.inthecheesefactory.thecheeselibrary.manager.Contextor;
 
 /**
@@ -18,6 +19,15 @@ public class PhotoListManager {
     }
 
     private Context mContext;
+    private PhotoItemCollectionDao dao;
+
+    public PhotoItemCollectionDao getDao() {
+        return dao;
+    }
+
+    public void setDao(PhotoItemCollectionDao dao) {
+        this.dao = dao;
+    }
 
     private PhotoListManager() {
         mContext = Contextor.getInstance().getContext();
